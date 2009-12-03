@@ -1,0 +1,26 @@
+I just needed to be able to copy value of fields from one place to another, and this did the trick...
+
+Think billing address and shipping address...
+
+Example:
+<script>
+  $("#same").copyFields("#shipping", "#billing")
+</script>
+<form>
+  Billing Address:
+  <div id="billing">
+    <input name="billing_street_address" type="text">
+    <input name="billing_city" type="text">
+    <input name="billing_zip" type="text">
+    <input name="billing_state" type="text">
+  </div>
+  Shipping Address:
+  Same as above?
+  <input type="checkbox" id="same">
+  <div id="shipping">
+    <input name="shipping_street_address" type="text">
+    <input name="shipping_city" type="text">
+    <input name="shipping_zip" type="text">
+    <input name="shipping_state" type="text">
+  </div>
+</form>
